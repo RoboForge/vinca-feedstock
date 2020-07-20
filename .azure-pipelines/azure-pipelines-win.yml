@@ -105,7 +105,10 @@ jobs:
 
     - script: |
         call activate base
-        quetz-client variables['QUETZ_URL'] .\
+        echo "** feedstock root:"
+        echo %FEEDSTOCK_ROOT%
+        dir .\
+        quetz-client "%QUETZ_URL%" .\
       displayName: Upload package to quetz
       env:
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
