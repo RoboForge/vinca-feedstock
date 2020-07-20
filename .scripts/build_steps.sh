@@ -36,7 +36,7 @@ conda build "${RECIPE_ROOT}" -m "${CI_SUPPORT}/${CONFIG}.yaml" \
 if [[ "${UPLOAD_PACKAGES}" != "False" ]]; then
    upload_package  "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 fi
-if [[ -v ${QUETZ_URL} ]]; then
+if [[ ! -z ${QUETZ_URL} ]]; then
    quetz-client ${QUETZ_URL} ${FEEDSTOCK_ROOT}
 fi
 

@@ -28,9 +28,9 @@ requirements:
     - rosdistro >=0.8.0
     - empy >=3.3.4
 
-test:
-  commands:
-    - vinca -h
+#test:
+#  commands:
+#    - vinca -h
 
 about:
   home: https://github.com/ros-forge/vinca
