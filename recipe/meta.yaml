@@ -10,13 +10,12 @@ source:
   git_rev: master
 
 build:
-  noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python }}
     - pip
     - setuptools
     - catkin_pkg >=0.4.16
