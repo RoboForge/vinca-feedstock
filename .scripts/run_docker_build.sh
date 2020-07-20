@@ -74,6 +74,8 @@ docker run ${DOCKER_RUN_ARGS} \
            -e CI \
            -e FEEDSTOCK_NAME \
            -e CPU_COUNT \
+           -e QUETZ_URL \
+           -e QUETZ_API_KEY \
            -e BINSTAR_TOKEN \
            $DOCKER_IMAGE \
            bash \
