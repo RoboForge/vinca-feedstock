@@ -54,7 +54,5 @@ if [[ "${UPLOAD_PACKAGES}" != "False" ]]; then
   upload_package  ./ ./recipe ./.ci_support/${CONFIG}.yaml
 fi
 if [[ ! -z ${QUETZ_URL} ]]; then
-  echo "feedstock root: ${FEEDSTOCK_ROOT}"
-  ls -ahl ./
-  quetz-client ${QUETZ_URL} ./
+  quetz-client ${QUETZ_URL} "${CONDA_PREFIX}/conda-bld"
 fi

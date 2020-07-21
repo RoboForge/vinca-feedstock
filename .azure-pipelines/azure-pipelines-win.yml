@@ -105,10 +105,7 @@ jobs:
 
     - script: |
         call activate base
-        echo "** feedstock root:"
-        echo %FEEDSTOCK_ROOT%
-        dir .\
-        quetz-client "%QUETZ_URL%" .\
+        quetz-client "%QUETZ_URL%" "%CONDA_PREFIX%\conda-bld"
       displayName: Upload package to quetz
       env:
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
