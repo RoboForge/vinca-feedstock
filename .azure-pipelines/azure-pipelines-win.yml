@@ -105,8 +105,7 @@ jobs:
 
     - script: |
         call activate base
-        SET
-        quetz-client "%QUETZ_URL%" D:\bld
+        quetz-client "%QUETZ_URL%" "%CONDA_BLD_PATH%"
       displayName: Upload package to quetz
       env:
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
