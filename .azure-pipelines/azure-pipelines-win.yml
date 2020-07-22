@@ -109,4 +109,4 @@ jobs:
       displayName: Upload package to quetz
       env:
         BINSTAR_TOKEN: $(BINSTAR_TOKEN)
-      condition: and(succeeded(), not(eq(variables['QUETZ_URL'], 'False')))
+      condition: and(succeeded(), not(eq(variables['QUETZ_URL'], '')))
